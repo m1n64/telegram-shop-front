@@ -1,8 +1,20 @@
 import '../styles/globals.css';
-
 import axios from 'axios';
 import type { AppProps } from 'next/app';
+import { Roboto, Roboto_Mono } from 'next/font/google';
 import { useEffect, useState } from 'react';
+
+const ROBOTO_TTF = Roboto({
+  weight: ['100', '300', '400', '500', '700', '900'],
+  variable: '--font-roboto',
+  subsets: ['cyrillic', 'latin'],
+});
+
+const ROBOTO_MONO_TTF = Roboto_Mono({
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
+  variable: '--font-roboto-mono',
+  subsets: ['cyrillic', 'latin'],
+});
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isHashValid, setIsHashValid] = useState(false);
@@ -20,7 +32,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     return null;
   }
 
-  return <Component {...pageProps} />;
+  return (
+    <div className={`${ROBOTO_TTF.variable} ${ROBOTO_MONO_TTF.variable}`}>
+      <Component {...pageProps} />
+    </div>
+  );
 }
 
 export default MyApp;

@@ -1,4 +1,6 @@
-# Next.js w/ Tailwind for Telegram Web Apps
+# WIP - Telegram Web App Shop
+
+### Next.js w/ Tailwind for Telegram Web Apps
 
 This is a template for quickly create Telegram Web Apps using [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/).
 
@@ -8,10 +10,8 @@ Next.js is easy and powerful, it also allows creating API routes without the nee
 
 ## How to use
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io) to create a new project:
-
 ```bash
-pnpm create next-app --example https://github.com/mauriciobraz/next.js-telegram-webapp your-app-name
+pnpm install
 ```
 
 Now, clone the [`.env.example`](.env.example) file and rename it to `.env.local` and fill the variables with your own data.
